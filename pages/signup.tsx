@@ -4,6 +4,7 @@ import * as ph from "@plasmicapp/host";
 import { ScreenVariantProvider } from "../components/plasmic/whats_up_clone/PlasmicGlobalVariant__Screen";
 import { PlasmicSignup } from "../components/plasmic/whats_up_clone/PlasmicSignup";
 import { useRouter } from "next/router";
+import enforceUnAuth from "../utils/enforceUnAuth";
 
 function Signup() {
 
@@ -13,5 +14,7 @@ function Signup() {
     </ph.PageParamsProvider>
   );
 }
+
+export const getServerSideProps = enforceUnAuth();
 
 export default Signup;

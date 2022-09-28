@@ -5,6 +5,7 @@ import { ScreenVariantProvider } from "../components/plasmic/whats_up_clone/Plas
 import { PlasmicHomepage } from "../components/plasmic/whats_up_clone/PlasmicHomepage";
 import { useRouter } from "next/router";
 import { supabase } from "../utils/supabaseClient";
+import enforceAuth from "../utils/enforceAuth";
 
 function Homepage() {
   const router = useRouter();
@@ -15,12 +16,13 @@ function Homepage() {
         logoutButton={{
           onClick: async () => {
             await supabase.auth.signOut();
-            router.replace('/login');
           }
         }}
       />
     </ph.PageParamsProvider>
   );
 }
+
+export const getServerSideProps = enforceAuth();
 
 export default Homepage;
