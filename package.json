@@ -9,6 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@plasmicapp/cli": "^0.1.186",
+    "@plasmicapp/host": "^1.0.79",
+    "@plasmicapp/react-web": "^0.2.110",
+    "@supabase/supabase-js": "^1.35.7",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"

@@ -1,0 +1,185 @@
+{
+  "platform": "nextjs",
+  "code": {
+    "lang": "ts",
+    "scheme": "blackbox",
+    "reactRuntime": "classic"
+  },
+  "style": {
+    "scheme": "css-modules",
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
+  },
+  "images": {
+    "scheme": "public-files",
+    "publicDir": "../public",
+    "publicUrlPrefix": "/"
+  },
+  "tokens": {
+    "scheme": "theo",
+    "tokensFilePath": "plasmic-tokens.theo.json"
+  },
+  "srcDir": "components",
+  "defaultPlasmicDir": "./plasmic",
+  "projects": [
+    {
+      "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+      "projectApiToken": "Bmvf0eNYnpJFbFP5bf3rjKHddxoSXhv9Hta1iXw8etX2IkXj4YDMpxyP3IPsLvpEHfs2ixMWhkuqFAWVbPA",
+      "projectName": "WhatsUpClone",
+      "version": "latest",
+      "cssFilePath": "plasmic/whats_up_clone/plasmic_whats_up_clone.module.css",
+      "components": [
+        {
+          "id": "DcfhispnNPca",
+          "name": "Homepage",
+          "type": "managed",
+          "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+          "renderModuleFilePath": "plasmic/whats_up_clone/PlasmicHomepage.tsx",
+          "importSpec": {
+            "modulePath": "../pages/index.tsx"
+          },
+          "cssFilePath": "plasmic/whats_up_clone/PlasmicHomepage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "r425P0ihH9",
+          "name": "Test",
+          "type": "managed",
+          "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+          "renderModuleFilePath": "plasmic/whats_up_clone/PlasmicTest.tsx",
+          "importSpec": {
+            "modulePath": "Test.tsx"
+          },
+          "cssFilePath": "plasmic/whats_up_clone/PlasmicTest.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "lcgmPEWIbZ9",
+          "name": "Button",
+          "type": "managed",
+          "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+          "renderModuleFilePath": "plasmic/whats_up_clone/PlasmicButton.tsx",
+          "importSpec": {
+            "modulePath": "Button.tsx"
+          },
+          "cssFilePath": "plasmic/whats_up_clone/PlasmicButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "button"
+        },
+        {
+          "id": "ECwaKqIb53",
+          "name": "Login",
+          "type": "managed",
+          "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+          "renderModuleFilePath": "plasmic/whats_up_clone/PlasmicLogin.tsx",
+          "importSpec": {
+            "modulePath": "../pages/login.tsx"
+          },
+          "cssFilePath": "plasmic/whats_up_clone/PlasmicLogin.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "mgwt4yM0UJ",
+          "name": "Signup",
+          "type": "managed",
+          "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+          "renderModuleFilePath": "plasmic/whats_up_clone/PlasmicSignup.tsx",
+          "importSpec": {
+            "modulePath": "../pages/signup.tsx"
+          },
+          "cssFilePath": "plasmic/whats_up_clone/PlasmicSignup.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "jn-EEM2fs2",
+          "name": "AuthComponent",
+          "type": "managed",
+          "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+          "renderModuleFilePath": "plasmic/whats_up_clone/PlasmicAuthComponent.tsx",
+          "importSpec": {
+            "modulePath": "AuthComponent.tsx"
+          },
+          "cssFilePath": "plasmic/whats_up_clone/PlasmicAuthComponent.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "I_rUXdtei71",
+          "name": "TextInput",
+          "type": "managed",
+          "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+          "renderModuleFilePath": "plasmic/whats_up_clone/PlasmicTextInput.tsx",
+          "importSpec": {
+            "modulePath": "TextInput.tsx"
+          },
+          "cssFilePath": "plasmic/whats_up_clone/PlasmicTextInput.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "text-input"
+        }
+      ],
+      "icons": [
+        {
+          "id": "F6EIEztEldC",
+          "name": "ChecksvgIcon",
+          "moduleFilePath": "plasmic/whats_up_clone/icons/PlasmicIcon__Checksvg.tsx"
+        },
+        {
+          "id": "WmT0SVOtYXf",
+          "name": "IconIcon",
+          "moduleFilePath": "plasmic/whats_up_clone/icons/PlasmicIcon__Icon.tsx"
+        },
+        {
+          "id": "B02IfxOijYJ",
+          "name": "SearchsvgIcon",
+          "moduleFilePath": "plasmic/whats_up_clone/icons/PlasmicIcon__Searchsvg.tsx"
+        },
+        {
+          "id": "y0YzrCuui",
+          "name": "Loader2Icon",
+          "moduleFilePath": "plasmic/whats_up_clone/icons/PlasmicIcon__Loader2.tsx"
+        },
+        {
+          "id": "IETgYjRwR",
+          "name": "Loader22Icon",
+          "moduleFilePath": "plasmic/whats_up_clone/icons/PlasmicIcon__Loader22.tsx"
+        }
+      ],
+      "images": [],
+      "indirect": false,
+      "globalContextsFilePath": "",
+      "codeComponents": [
+        {
+          "id": "xoDu4dEdvE",
+          "name": "PlasmicHead",
+          "componentImportPath": "@plasmicapp/react-web"
+        },
+        {
+          "id": "9fb5Xeecxy",
+          "name": "Fetcher",
+          "componentImportPath": "@plasmicapp/data-sources"
+        }
+      ]
+    }
+  ],
+  "globalVariants": {
+    "variantGroups": [
+      {
+        "id": "OliKqJIvB6LTf",
+        "name": "Screen",
+        "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+        "contextFilePath": "plasmic/whats_up_clone/PlasmicGlobalVariant__Screen.tsx"
+      }
+    ]
+  },
+  "wrapPagesWithGlobalContexts": true,
+  "nextjsConfig": {
+    "pagesDir": "../pages"
+  },
+  "cliVersion": "0.1.186",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.186/dist/plasmic.schema.json"
+}
