@@ -41,11 +41,18 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic_whats_up_clone.module.css"; // plasmic-import: 6DJkPmHY5SLmKWFpAEwtam/projectcss
 import sty from "./PlasmicChatListItem.module.css"; // plasmic-import: Y-3HcglXLQ/css
 
-export type PlasmicChatListItem__VariantMembers = {};
+export type PlasmicChatListItem__VariantMembers = {
+  isSelected: "isSelected";
+};
 
-export type PlasmicChatListItem__VariantsArgs = {};
+export type PlasmicChatListItem__VariantsArgs = {
+  isSelected?: SingleBooleanChoiceArg<"isSelected">;
+};
+
 type VariantPropType = keyof PlasmicChatListItem__VariantsArgs;
-export const PlasmicChatListItem__VariantProps = new Array<VariantPropType>();
+export const PlasmicChatListItem__VariantProps = new Array<VariantPropType>(
+  "isSelected"
+);
 
 export type PlasmicChatListItem__ArgsType = {
   roomName?: React.ReactNode;
@@ -62,6 +69,7 @@ export type PlasmicChatListItem__OverridesType = {
 
 export interface DefaultChatListItemProps {
   roomName?: React.ReactNode;
+  isSelected?: SingleBooleanChoiceArg<"isSelected">;
   className?: string;
 }
 
@@ -104,7 +112,10 @@ function PlasmicChatListItem__RenderFunc(props: {
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
         projectcss.plasmic_tokens,
-        sty.root
+        sty.root,
+        {
+          [sty.rootisSelected]: hasVariant(variants, "isSelected", "isSelected")
+        }
       )}
     >
       <Avatar

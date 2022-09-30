@@ -6,7 +6,6 @@ import { useRouter } from "next/router";
 import enforceUnAuth from "../utils/enforceUnAuth";
 
 function Signup() {
-
   return (
     <ph.PageParamsProvider params={useRouter().query} query={useRouter().query}>
       <PlasmicSignup />

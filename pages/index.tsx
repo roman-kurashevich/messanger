@@ -1,9 +1,8 @@
 import * as React from "react";
 import * as ph from "@plasmicapp/host";
-
-import { ScreenVariantProvider } from "../components/plasmic/whats_up_clone/PlasmicGlobalVariant__Screen";
-import { PlasmicHomepage } from "../components/plasmic/whats_up_clone/PlasmicHomepage";
 import { useRouter } from "next/router";
+
+import { PlasmicHomepage } from "../components/plasmic/whats_up_clone/PlasmicHomepage";
 import { supabase } from "../utils/supabaseClient";
 import enforceAuth from "../utils/enforceAuth";
 

@@ -144,7 +144,8 @@ function PlasmicSidebar__RenderFunc(props: {
               <div className={classNames(projectcss.all, sty.freeBox__rNKtW)}>
                 {p.renderPlasmicSlot({
                   defaultContents: "Enter some text",
-                  value: args.username
+                  value: args.username,
+                  className: classNames(sty.slotTargetUsername)
                 })}
               </div>
             ) : null}

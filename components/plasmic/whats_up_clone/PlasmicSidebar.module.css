@@ -31,7 +31,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  background: var(--token-T1fInkDJn);
+  background: var(--token-V2ssup5jt);
   border-top-left-radius: 20px;
   min-width: 0;
   padding: 8px;
@@ -96,6 +96,9 @@
   max-width: 100%;
   min-width: 0;
   padding: 8px;
+}
+.slotTargetUsername {
+  color: #ffffff;
 }
 .logoutIcon {
   position: relative;

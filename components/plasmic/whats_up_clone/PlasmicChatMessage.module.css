@@ -101,6 +101,9 @@
   flex-direction: row-reverse;
   flex-row-gap: 0px;
 }
+.slotTargetCreatedAt {
+  font-size: 12px;
+}
 .freeBox__eEsS {
   position: absolute;
   width: auto;

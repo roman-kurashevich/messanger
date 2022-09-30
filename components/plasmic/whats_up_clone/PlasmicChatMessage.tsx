@@ -159,7 +159,8 @@ function PlasmicChatMessage__RenderFunc(props: {
         >
           {p.renderPlasmicSlot({
             defaultContents: "8 minutes ago",
-            value: args.createdAt
+            value: args.createdAt,
+            className: classNames(sty.slotTargetCreatedAt)
           })}
         </div>
       </p.Stack>

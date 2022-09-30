@@ -1,14 +1,16 @@
 import React, { forwardRef, useEffect, useRef, useState } from "react";
+import { HTMLElementRefOf } from "@plasmicapp/react-web";
+import * as moment from "moment";
+
+import { useGetChatRoomDetails } from "../lib/supabase/chat_rooms";
+import { useCreateNewMessage, useGetChatMessages } from "../lib/supabase/messages";
+import { supabase } from "../utils/supabaseClient";
+
 import {
   PlasmicChat,
   DefaultChatProps
 } from "./plasmic/whats_up_clone/PlasmicChat";
-import { HTMLElementRefOf } from "@plasmicapp/react-web";
-import { useGetChatRoomDetails } from "../lib/supabase/chat_rooms";
-import { useCreateNewMessage, useGetChatMessages } from "../lib/supabase/messages";
 import ChatMessage from "./ChatMessage";
-import { supabase } from "../utils/supabaseClient";
-import * as moment from "moment";
 
 export interface ChatProps extends DefaultChatProps {}
 
@@ -17,32 +19,32 @@ interface IProps {
 }
 
 function Chat_({roomId, ...props}: IProps, ref: HTMLElementRefOf<"div">) {
-  const scrollRef = useRef()
-  const [newMessage, setNewMessage] = useState("")
+  const [newMessage, setNewMessage] = useState("");
 
-  const {data: roomDetails} = useGetChatRoomDetails({roomId})
-  const {data: chatMessages, isLoading: chatMessagesIsLoading , refetch: fetchMessages} = useGetChatMessages(roomId)
+  const scrollRef = useRef();
+  
+  const {data: roomDetails} = useGetChatRoomDetails({ roomId });
+  const {data: chatMessages, isLoading: chatMessagesIsLoading , refetch: fetchMessages} = useGetChatMessages(roomId);
+  const createNewMessageMutation = useCreateNewMessage(roomId);
 
-  const createNewMessageMutation = useCreateNewMessage(roomId)
-
-  const user = supabase.auth.user()
+  const user = supabase.auth.user();
 
   useEffect(() => {
     const subscription = supabase
     .from("messages")
     .on("INSERT", (payload: any) => {
-      fetchMessages()
+      fetchMessages();
     })
-    .subscribe()
+    .subscribe();
 
-    console.log('Subscribe to message insert changes')
+    console.log('Subscribe to message insert changes');
 
-    return () => supabase.removeSubscription(subscription)
+    return () => supabase.removeSubscription(subscription);
   }, [])
 
   useEffect(() => {
     if(!scrollRef.current) {
-      return
+      return;
     }
 
     setTimeout(() => {
@@ -54,15 +56,14 @@ function Chat_({roomId, ...props}: IProps, ref: HTMLElementRefOf<"div">) {
 
   async function createNewMessage() {
     if(newMessage?.length <= 0) {
-      return
+      return;
     }
-    await createNewMessageMutation.mutateAsync({
-      content: newMessage,
-    })
-    setNewMessage("")
+
+    await createNewMessageMutation.mutateAsync({ content: newMessage });
+
+    setNewMessage("");
   }
   
- 
   return (
   <PlasmicChat
     root={{ ref }}
@@ -94,7 +95,7 @@ function Chat_({roomId, ...props}: IProps, ref: HTMLElementRefOf<"div">) {
                     isEmpty: !message?.avatar_url,
                     imageUrl: message?.avatar_url,
                   }}
-                  isSent={user.id === message.sender_id}
+                  isSent={user?.id === message.sender_id}
                 />
               ))
             }
@@ -106,22 +107,22 @@ function Chat_({roomId, ...props}: IProps, ref: HTMLElementRefOf<"div">) {
     messageTextInput={{
       value: newMessage,
       onChange: (e) => {
-        setNewMessage(e.target.value)
+        setNewMessage(e.target.value);
       },
       onKeyDown: async (e) => {
         if(e.key === "Enter") {
-         await createNewMessage()
+         await createNewMessage();
         }
       }
     }}
     sendIcon={{
       onClick: async () => {
-        await createNewMessage() 
+        await createNewMessage();
       }
     }}
   />
   );
-}
+};
 
 const Chat = forwardRef(Chat_);
 export default Chat;
