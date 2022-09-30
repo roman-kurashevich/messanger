@@ -175,6 +175,7 @@ function PlasmicSidebar__RenderFunc(props: {
                   sty.searchRoomTextInput
                 )}
                 placeholder={"Search room by name..." as const}
+                type={"text" as const}
               />
             ) : null}
           </div>

@@ -20,7 +20,7 @@ function Chat_({roomId, ...props}: IProps, ref: HTMLElementRefOf<"div">) {
   const scrollRef = useRef()
   const [newMessage, setNewMessage] = useState("")
 
-  const {data: roomDetails} = useGetChatRoomDetails(roomId)
+  const {data: roomDetails} = useGetChatRoomDetails({roomId})
   const {data: chatMessages, isLoading: chatMessagesIsLoading , refetch: fetchMessages} = useGetChatMessages(roomId)
 
   const createNewMessageMutation = useCreateNewMessage(roomId)
@@ -72,7 +72,7 @@ function Chat_({roomId, ...props}: IProps, ref: HTMLElementRefOf<"div">) {
       prefixText: roomDetails?.room_name[0]?.toUpperCase(),
 
     }}
-    // roomName={roomDetails?.room_name}
+    roomName={roomDetails?.room_name}
     body={{
       wrapChildren: (children) => {
         return (
