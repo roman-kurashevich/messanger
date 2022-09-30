@@ -42,12 +42,12 @@ import sty from "./PlasmicAvatar.module.css"; // plasmic-import: T7ydlGAjdN/css
 
 export type PlasmicAvatar__VariantMembers = {
   isEmpty: "isEmpty";
-  size: "_60" | "_40";
+  size: "_60" | "_40" | "_30";
 };
 
 export type PlasmicAvatar__VariantsArgs = {
   isEmpty?: SingleBooleanChoiceArg<"isEmpty">;
-  size?: SingleChoiceArg<"_60" | "_40">;
+  size?: SingleChoiceArg<"_60" | "_40" | "_30">;
 };
 
 type VariantPropType = keyof PlasmicAvatar__VariantsArgs;
@@ -77,7 +77,7 @@ export interface DefaultAvatarProps {
   imageUrl?: React.ComponentProps<typeof p.PlasmicImg>["src"];
   prefixText?: React.ReactNode;
   isEmpty?: SingleBooleanChoiceArg<"isEmpty">;
-  size?: SingleChoiceArg<"_60" | "_40">;
+  size?: SingleChoiceArg<"_60" | "_40" | "_30">;
   className?: string;
 }
 
@@ -122,6 +122,9 @@ function PlasmicAvatar__RenderFunc(props: {
           sty.root,
           {
             [sty.rootisEmpty]: hasVariant(variants, "isEmpty", "isEmpty"),
+            [sty.rootisEmpty_size__30]:
+              hasVariant(variants, "isEmpty", "isEmpty") &&
+              hasVariant(variants, "size", "_30"),
             [sty.rootisEmpty_size__40]:
               hasVariant(variants, "isEmpty", "isEmpty") &&
               hasVariant(variants, "size", "_40"),
@@ -141,11 +144,14 @@ function PlasmicAvatar__RenderFunc(props: {
               [sty.imgisEmpty_size__40]:
                 hasVariant(variants, "isEmpty", "isEmpty") &&
                 hasVariant(variants, "size", "_40"),
+              [sty.imgsize__30]: hasVariant(variants, "size", "_30"),
               [sty.imgsize__40]: hasVariant(variants, "size", "_40"),
               [sty.imgsize__60]: hasVariant(variants, "size", "_60")
             })}
             displayHeight={
-              hasVariant(variants, "size", "_40")
+              hasVariant(variants, "size", "_30")
+                ? ("30px" as const)
+                : hasVariant(variants, "size", "_40")
                 ? ("40px" as const)
                 : hasVariant(variants, "size", "_60")
                 ? ("60px" as const)
@@ -154,21 +160,27 @@ function PlasmicAvatar__RenderFunc(props: {
             displayMaxHeight={"none" as const}
             displayMaxWidth={"100%" as const}
             displayMinHeight={
-              hasVariant(variants, "size", "_40")
+              hasVariant(variants, "size", "_30")
+                ? ("30px" as const)
+                : hasVariant(variants, "size", "_40")
                 ? ("40px" as const)
                 : hasVariant(variants, "size", "_60")
                 ? ("60px" as const)
                 : ("80px" as const)
             }
             displayMinWidth={
-              hasVariant(variants, "size", "_40")
+              hasVariant(variants, "size", "_30")
+                ? ("30px" as const)
+                : hasVariant(variants, "size", "_40")
                 ? ("40px" as const)
                 : hasVariant(variants, "size", "_60")
                 ? ("60px" as const)
                 : ("80px" as const)
             }
             displayWidth={
-              hasVariant(variants, "size", "_40")
+              hasVariant(variants, "size", "_30")
+                ? ("30px" as const)
+                : hasVariant(variants, "size", "_40")
                 ? ("40px" as const)
                 : hasVariant(variants, "size", "_60")
                 ? ("60px" as const)
@@ -183,7 +195,10 @@ function PlasmicAvatar__RenderFunc(props: {
             data-plasmic-name={"freeBox"}
             data-plasmic-override={overrides.freeBox}
             className={classNames(projectcss.all, sty.freeBox, {
-              [sty.freeBoxisEmpty]: hasVariant(variants, "isEmpty", "isEmpty")
+              [sty.freeBoxisEmpty]: hasVariant(variants, "isEmpty", "isEmpty"),
+              [sty.freeBoxisEmpty_size__30]:
+                hasVariant(variants, "isEmpty", "isEmpty") &&
+                hasVariant(variants, "size", "_30")
             })}
           >
             {p.renderPlasmicSlot({
@@ -195,6 +210,12 @@ function PlasmicAvatar__RenderFunc(props: {
                   "isEmpty",
                   "isEmpty"
                 ),
+                [sty.slotTargetPrefixTextisEmpty_size__30]:
+                  hasVariant(variants, "isEmpty", "isEmpty") &&
+                  hasVariant(variants, "size", "_30"),
+                [sty.slotTargetPrefixTextisEmpty_size__40]:
+                  hasVariant(variants, "isEmpty", "isEmpty") &&
+                  hasVariant(variants, "size", "_40"),
                 [sty.slotTargetPrefixTextisEmpty_size__60]:
                   hasVariant(variants, "isEmpty", "isEmpty") &&
                   hasVariant(variants, "size", "_60")

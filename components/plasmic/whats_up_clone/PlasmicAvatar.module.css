@@ -34,6 +34,12 @@
   min-height: 40px;
   width: 40px;
 }
+.rootisEmpty_size__30 {
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  min-height: 30px;
+}
 .img {
   object-fit: cover;
   max-width: 100%;
@@ -67,6 +73,13 @@
   min-height: 40px;
   flex-shrink: 0;
 }
+.imgsize__30 {
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  min-height: 30px;
+  flex-shrink: 0;
+}
 .freeBox {
   position: relative;
   width: auto;
@@ -82,4 +95,10 @@
 .slotTargetPrefixText {
   font-size: 32px;
   text-align: center;
+}
+.slotTargetPrefixTextisEmpty_size__40 {
+  font-size: 24px;
+}
+.slotTargetPrefixTextisEmpty_size__30 {
+  font-size: 20px;
 }

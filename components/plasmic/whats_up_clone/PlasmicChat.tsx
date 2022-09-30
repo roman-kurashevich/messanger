@@ -45,6 +45,7 @@ import sty from "./PlasmicChat.module.css"; // plasmic-import: q90B5ozMzC/css
 
 import SearchsvgIcon from "./icons/PlasmicIcon__Searchsvg"; // plasmic-import: B02IfxOijYJ/icon
 import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: F6EIEztEldC/icon
+import SendIcon from "./icons/PlasmicIcon__Send"; // plasmic-import: zMBuq_8SO/icon
 
 export type PlasmicChat__VariantMembers = {};
 
@@ -183,7 +184,7 @@ function PlasmicChat__RenderFunc(props: {
           type={"text" as const}
         />
 
-        <ChecksvgIcon
+        <SendIcon
           data-plasmic-name={"sendIcon"}
           data-plasmic-override={overrides.sendIcon}
           className={classNames(projectcss.all, sty.sendIcon)}

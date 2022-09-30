@@ -1,4 +1,4 @@
-import React, { forwardRef, useState } from "react";
+import React, { forwardRef, useEffect, useState } from "react";
 import { HTMLElementRefOf } from "@plasmicapp/react-web";
 import { useRouter } from "next/router";
 
@@ -16,13 +16,14 @@ export interface SidebarProps extends DefaultSidebarProps {}
 
 function Sidebar_(props: SidebarProps, ref: HTMLElementRefOf<"div">) {
   const [searchQuery, setSearchQuery] = useState("");
+  const [username, setUsername] = useState("");
 
   const router = useRouter();
   const {roomId} = router.query;
 
   const user = supabase.auth.user()
 
-  const {data: userProfile} = useGetUserProfile(user?.id);
+  const {data: userProfile, isLoading: userIsLoading} = useGetUserProfile(user?.id);
   const createChatRoomMutation = useCreateChatRoom();
   const {
     data: chatRoomsList,
@@ -30,10 +31,13 @@ function Sidebar_(props: SidebarProps, ref: HTMLElementRefOf<"div">) {
     isLoading: chatRoomsListLoading,
   } = useGetChatRooms({ searchQuery })
 
-  let username = user?.email;
-  if(userProfile?.first_name || userProfile?.last_name){
-    username = `${userProfile?.first_name} ${userProfile?.last_name}`;
-  }
+  useEffect(() => {
+    if(userProfile?.first_name || userProfile?.last_name){
+      setUsername(`${userProfile?.first_name} ${userProfile?.last_name}`);
+    } else {
+      setUsername(user?.email)
+    }
+  }, [userIsLoading, user])
 
   return (
     <PlasmicSidebar
@@ -50,7 +54,7 @@ function Sidebar_(props: SidebarProps, ref: HTMLElementRefOf<"div">) {
           router.replace('/profile');
         }
       }}
-      // username={username}
+      username={username}
       userAvatar={{
         prefixText: (
           userProfile?.first_name && userProfile?.first_name[0].toUpperCase() ||

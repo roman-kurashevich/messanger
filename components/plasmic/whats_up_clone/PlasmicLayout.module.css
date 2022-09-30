@@ -11,7 +11,8 @@
 }
 .sidebar:global(.__wab_instance) {
   position: relative;
-  flex-shrink: 0;
+  width: auto;
+  min-width: 250px;
 }
 .chat___0PbbK:global(.__wab_instance) {
   position: relative;

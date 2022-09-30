@@ -36,6 +36,7 @@ import {
 } from "@plasmicapp/react-web";
 import Avatar from "../../Avatar"; // plasmic-import: T7ydlGAjdN/component
 import TextInput from "../../TextInput"; // plasmic-import: I_rUXdtei71/component
+import AddNewRoomWrapper from "../../AddNewRoomWrapper"; // plasmic-import: FolNORxbn8/component
 import ChatList from "../../ChatList"; // plasmic-import: 61OiGHIuWZ/component
 
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -43,7 +44,7 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic_whats_up_clone.module.css"; // plasmic-import: 6DJkPmHY5SLmKWFpAEwtam/projectcss
 import sty from "./PlasmicSidebar.module.css"; // plasmic-import: On4mLNNx3a/css
 
-import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: WmT0SVOtYXf/icon
+import LogoutIcon from "./icons/PlasmicIcon__Logout"; // plasmic-import: pLzCWT-J5/icon
 import SearchsvgIcon from "./icons/PlasmicIcon__Searchsvg"; // plasmic-import: B02IfxOijYJ/icon
 import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: F6EIEztEldC/icon
 
@@ -67,8 +68,7 @@ export type PlasmicSidebar__OverridesType = {
   logoutIcon?: p.Flex<"svg">;
   searchInputWrapper?: p.Flex<"div">;
   searchRoomTextInput?: p.Flex<typeof TextInput>;
-  addNewRoomWrapper?: p.Flex<"div">;
-  text?: p.Flex<"div">;
+  addNewRoomWrapper?: p.Flex<typeof AddNewRoomWrapper>;
   chatList?: p.Flex<typeof ChatList>;
 };
 
@@ -126,33 +126,23 @@ function PlasmicSidebar__RenderFunc(props: {
         hasGap={true}
         className={classNames(projectcss.all, sty.headerProfile)}
       >
-        {true ? (
-          <p.Stack
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__oXsY)}
-          >
-            <Avatar
-              data-plasmic-name={"userAvatar"}
-              data-plasmic-override={overrides.userAvatar}
-              className={classNames("__wab_instance", sty.userAvatar)}
-              isEmpty={true}
-              size={"_60" as const}
-            />
+        <Avatar
+          data-plasmic-name={"userAvatar"}
+          data-plasmic-override={overrides.userAvatar}
+          className={classNames("__wab_instance", sty.userAvatar)}
+          isEmpty={true}
+          size={"_60" as const}
+        />
 
-            {true ? (
-              <div className={classNames(projectcss.all, sty.freeBox__rNKtW)}>
-                {p.renderPlasmicSlot({
-                  defaultContents: "Enter some text",
-                  value: args.username,
-                  className: classNames(sty.slotTargetUsername)
-                })}
-              </div>
-            ) : null}
-          </p.Stack>
-        ) : null}
+        <div className={classNames(projectcss.all, sty.freeBox__ws6Xk)}>
+          {p.renderPlasmicSlot({
+            defaultContents: "Enter some text",
+            value: args.username,
+            className: classNames(sty.slotTargetUsername)
+          })}
+        </div>
 
-        <IconIcon
+        <LogoutIcon
           data-plasmic-name={"logoutIcon"}
           data-plasmic-override={overrides.logoutIcon}
           className={classNames(projectcss.all, sty.logoutIcon)}
@@ -185,23 +175,11 @@ function PlasmicSidebar__RenderFunc(props: {
 
       {true ? (
         <div className={classNames(projectcss.all, sty.freeBox___5Jqex)}>
-          <div
+          <AddNewRoomWrapper
             data-plasmic-name={"addNewRoomWrapper"}
             data-plasmic-override={overrides.addNewRoomWrapper}
-            className={classNames(projectcss.all, sty.addNewRoomWrapper)}
-          >
-            <div
-              data-plasmic-name={"text"}
-              data-plasmic-override={overrides.text}
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text
-              )}
-            >
-              {"Add new room"}
-            </div>
-          </div>
+            className={classNames("__wab_instance", sty.addNewRoomWrapper)}
+          />
         </div>
       ) : null}
       {true ? (
@@ -226,7 +204,6 @@ const PlasmicDescendants = {
     "searchInputWrapper",
     "searchRoomTextInput",
     "addNewRoomWrapper",
-    "text",
     "chatList"
   ],
   headerProfile: ["headerProfile", "userAvatar", "logoutIcon"],
@@ -234,8 +211,7 @@ const PlasmicDescendants = {
   logoutIcon: ["logoutIcon"],
   searchInputWrapper: ["searchInputWrapper", "searchRoomTextInput"],
   searchRoomTextInput: ["searchRoomTextInput"],
-  addNewRoomWrapper: ["addNewRoomWrapper", "text"],
-  text: ["text"],
+  addNewRoomWrapper: ["addNewRoomWrapper"],
   chatList: ["chatList"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -248,8 +224,7 @@ type NodeDefaultElementType = {
   logoutIcon: "svg";
   searchInputWrapper: "div";
   searchRoomTextInput: typeof TextInput;
-  addNewRoomWrapper: "div";
-  text: "div";
+  addNewRoomWrapper: typeof AddNewRoomWrapper;
   chatList: typeof ChatList;
 };
 
@@ -320,7 +295,6 @@ export const PlasmicSidebar = Object.assign(
     searchInputWrapper: makeNodeComponent("searchInputWrapper"),
     searchRoomTextInput: makeNodeComponent("searchRoomTextInput"),
     addNewRoomWrapper: makeNodeComponent("addNewRoomWrapper"),
-    text: makeNodeComponent("text"),
     chatList: makeNodeComponent("chatList"),
 
     // Metadata about props expected for PlasmicSidebar

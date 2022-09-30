@@ -87,6 +87,9 @@
   min-width: 0;
   padding: 8px;
 }
+.slotTargetContent {
+  font-size: 14px;
+}
 .freeBox___7YoHf {
   position: relative;
   width: 100%;
@@ -102,24 +105,25 @@
   flex-row-gap: 0px;
 }
 .slotTargetCreatedAt {
-  font-size: 12px;
+  font-size: 10px;
 }
 .freeBox__eEsS {
   position: absolute;
   width: auto;
   height: auto;
   max-width: 800px;
-  left: 48px;
-  top: -30px;
+  left: 45px;
+  top: -22px;
   display: flex;
   flex-direction: row;
 }
 .freeBoxisSent__eEsSerpDu {
-  top: -34px;
+  top: -23px;
   left: auto;
-  right: 64px;
+  right: 59px;
 }
 .slotTargetUsername {
   font-weight: 500;
   color: #000000;
+  font-size: 12px;
 }

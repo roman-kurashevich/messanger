@@ -31,8 +31,8 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  background: var(--token-V2ssup5jt);
   border-top-left-radius: 20px;
+  background: var(--token-V2ssup5jt);
   min-width: 0;
   padding: 8px;
 }
@@ -54,59 +54,32 @@
   > img {
   margin-left: 16px;
 }
-.freeBox__oXsY {
-  flex-direction: row;
-  display: flex;
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  min-width: 0;
-  padding: 0px;
-}
-.freeBox__oXsY > :global(.__wab_flex-container) {
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  min-width: 0;
-  margin-left: calc(0px - 5px);
-  width: calc(100% + 5px);
-}
-.freeBox__oXsY > :global(.__wab_flex-container) > *,
-.freeBox__oXsY > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.freeBox__oXsY > :global(.__wab_flex-container) > picture > img,
-.freeBox__oXsY
-  > :global(.__wab_flex-container)
-  > :global(.__wab_slot)
-  > picture
-  > img {
-  margin-left: 5px;
-}
 .userAvatar:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
   flex-shrink: 0;
 }
-.freeBox__rNKtW {
-  display: flex;
+.freeBox__ws6Xk {
   position: relative;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: flex-start;
   width: 100%;
   height: auto;
-  max-width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: row;
   min-width: 0;
-  padding: 8px;
 }
 .slotTargetUsername {
-  color: #ffffff;
+  color: var(--token-T1fInkDJn);
 }
 .logoutIcon {
   position: relative;
   object-fit: cover;
   max-width: 100%;
-  width: 1em;
+  width: 20px;
+  height: 20px;
+  color: var(--token-T1fInkDJn);
+  cursor: pointer;
   flex-shrink: 0;
-  height: 1em;
 }
 .searchInputWrapper {
   display: flex;
@@ -160,34 +133,6 @@
   margin-left: 0px;
   min-width: 0;
   padding: 8px;
-}
-.addNewRoomWrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: flex-start;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  cursor: pointer;
-  background: linear-gradient(0deg, var(--token-IEyvDu3g2) 0%, #56b9ff 100%) 0%
-      0% / 100% 100% repeat,
-    var(--token-IEyvDu3g2);
-  min-width: 0;
-  border-radius: 10px;
-  padding: 0px 0px 0px 10px;
-}
-.text {
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 800px;
-  font-size: 24px;
-  font-weight: 600;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: var(--token-T1fInkDJn);
-  min-width: 0;
 }
 .freeBox__cweDs {
   display: flex;

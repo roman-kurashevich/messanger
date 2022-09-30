@@ -263,6 +263,19 @@
           "cssFilePath": "plasmic/whats_up_clone/PlasmicUserProfile.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "FolNORxbn8",
+          "name": "AddNewRoomWrapper",
+          "type": "managed",
+          "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+          "renderModuleFilePath": "plasmic/whats_up_clone/PlasmicAddNewRoomWrapper.tsx",
+          "importSpec": {
+            "modulePath": "AddNewRoomWrapper.tsx"
+          },
+          "cssFilePath": "plasmic/whats_up_clone/PlasmicAddNewRoomWrapper.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -290,6 +303,16 @@
           "id": "IETgYjRwR",
           "name": "Loader22Icon",
           "moduleFilePath": "plasmic/whats_up_clone/icons/PlasmicIcon__Loader22.tsx"
+        },
+        {
+          "id": "zMBuq_8SO",
+          "name": "SendIcon",
+          "moduleFilePath": "plasmic/whats_up_clone/icons/PlasmicIcon__Send.tsx"
+        },
+        {
+          "id": "pLzCWT-J5",
+          "name": "LogoutIcon",
+          "moduleFilePath": "plasmic/whats_up_clone/icons/PlasmicIcon__Logout.tsx"
         }
       ],
       "images": [],

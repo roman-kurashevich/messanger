@@ -59,7 +59,7 @@
   min-width: 0;
 }
 .slotTargetRoomName {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--token-T1fInkDJn);
 }
@@ -117,7 +117,7 @@
   background: none;
   border-bottom-right-radius: 20px;
   min-width: 0;
-  padding: 8px 8px 20px;
+  padding: 8px 20px 20px 8px;
 }
 .footer > :global(.__wab_flex-container) {
   flex-direction: row;
@@ -159,5 +159,6 @@
   max-width: 100%;
   width: 30px;
   height: 30px;
+  cursor: pointer;
   flex-shrink: 0;
 }
