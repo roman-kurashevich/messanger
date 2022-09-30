@@ -120,6 +120,149 @@
           "scheme": "blackbox",
           "componentType": "component",
           "plumeType": "text-input"
+        },
+        {
+          "id": "3zcBqqIDwE",
+          "name": "Layout",
+          "type": "managed",
+          "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+          "renderModuleFilePath": "plasmic/whats_up_clone/PlasmicLayout.tsx",
+          "importSpec": {
+            "modulePath": "Layout.tsx"
+          },
+          "cssFilePath": "plasmic/whats_up_clone/PlasmicLayout.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "On4mLNNx3a",
+          "name": "Sidebar",
+          "type": "managed",
+          "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+          "renderModuleFilePath": "plasmic/whats_up_clone/PlasmicSidebar.tsx",
+          "importSpec": {
+            "modulePath": "Sidebar.tsx"
+          },
+          "cssFilePath": "plasmic/whats_up_clone/PlasmicSidebar.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "q90B5ozMzC",
+          "name": "Chat",
+          "type": "managed",
+          "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+          "renderModuleFilePath": "plasmic/whats_up_clone/PlasmicChat.tsx",
+          "importSpec": {
+            "modulePath": "Chat.tsx"
+          },
+          "cssFilePath": "plasmic/whats_up_clone/PlasmicChat.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "T7ydlGAjdN",
+          "name": "Avatar",
+          "type": "managed",
+          "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+          "renderModuleFilePath": "plasmic/whats_up_clone/PlasmicAvatar.tsx",
+          "importSpec": {
+            "modulePath": "Avatar.tsx"
+          },
+          "cssFilePath": "plasmic/whats_up_clone/PlasmicAvatar.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "Y-3HcglXLQ",
+          "name": "ChatListItem",
+          "type": "managed",
+          "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+          "renderModuleFilePath": "plasmic/whats_up_clone/PlasmicChatListItem.tsx",
+          "importSpec": {
+            "modulePath": "ChatListItem.tsx"
+          },
+          "cssFilePath": "plasmic/whats_up_clone/PlasmicChatListItem.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "61OiGHIuWZ",
+          "name": "ChatList",
+          "type": "managed",
+          "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+          "renderModuleFilePath": "plasmic/whats_up_clone/PlasmicChatList.tsx",
+          "importSpec": {
+            "modulePath": "ChatList.tsx"
+          },
+          "cssFilePath": "plasmic/whats_up_clone/PlasmicChatList.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "PlKHEsKkAn",
+          "name": "ChatMessage",
+          "type": "managed",
+          "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+          "renderModuleFilePath": "plasmic/whats_up_clone/PlasmicChatMessage.tsx",
+          "importSpec": {
+            "modulePath": "ChatMessage.tsx"
+          },
+          "cssFilePath": "plasmic/whats_up_clone/PlasmicChatMessage.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "pLqN3qyNoA",
+          "name": "RoomChat",
+          "type": "managed",
+          "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+          "renderModuleFilePath": "plasmic/whats_up_clone/PlasmicRoomChat.tsx",
+          "importSpec": {
+            "modulePath": "../pages/room/[roomId].tsx"
+          },
+          "cssFilePath": "plasmic/whats_up_clone/PlasmicRoomChat.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "55kQxCDXqj",
+          "name": "Profile",
+          "type": "managed",
+          "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+          "renderModuleFilePath": "plasmic/whats_up_clone/PlasmicProfile.tsx",
+          "importSpec": {
+            "modulePath": "../pages/profile.tsx"
+          },
+          "cssFilePath": "plasmic/whats_up_clone/PlasmicProfile.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "9xuliDXofB",
+          "name": "UploadAvatar",
+          "type": "managed",
+          "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+          "renderModuleFilePath": "plasmic/whats_up_clone/PlasmicUploadAvatar.tsx",
+          "importSpec": {
+            "modulePath": "UploadAvatar.tsx"
+          },
+          "cssFilePath": "plasmic/whats_up_clone/PlasmicUploadAvatar.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "lZJgYgKoU6i",
+          "name": "UserProfile",
+          "type": "managed",
+          "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+          "renderModuleFilePath": "plasmic/whats_up_clone/PlasmicUserProfile.tsx",
+          "importSpec": {
+            "modulePath": "UserProfile.tsx"
+          },
+          "cssFilePath": "plasmic/whats_up_clone/PlasmicUserProfile.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [

@@ -1,0 +1,163 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  position: relative;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: var(--token-T1fInkDJn);
+  min-width: 0;
+  min-height: 0;
+  padding: 0px;
+}
+.header {
+  flex-direction: row;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  background: var(--token-Drwm0lPiu);
+  border-top-right-radius: 20px;
+  min-width: 0;
+  padding: 8px;
+}
+.header > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  margin-left: calc(0px - 16px);
+  width: calc(100% + 16px);
+}
+.header > :global(.__wab_flex-container) > *,
+.header > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.header > :global(.__wab_flex-container) > picture > img,
+.header
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 16px;
+}
+.roomAvatar:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  flex-shrink: 0;
+}
+.freeBox {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: row;
+  min-width: 0;
+}
+.slotTargetRoomName {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--token-T1fInkDJn);
+}
+.body {
+  flex-direction: column;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  background: none;
+  overflow: auto;
+  min-width: 0;
+  min-height: 0;
+  padding: 32px 8px 20px;
+}
+.body > :global(.__wab_flex-container) {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  min-height: 0;
+  margin-top: calc(0px - 40px);
+  height: calc(100% + 40px);
+}
+.body > :global(.__wab_flex-container) > *,
+.body > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.body > :global(.__wab_flex-container) > picture > img,
+.body > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
+  margin-top: 40px;
+}
+.chatMessage__pQ7S:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.chatMessage__dQl4U:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.chatMessage__yN3Rh:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.chatMessage__kKx3N:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.footer {
+  flex-direction: row;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  background: none;
+  border-bottom-right-radius: 20px;
+  min-width: 0;
+  padding: 8px 8px 20px;
+}
+.footer > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  margin-left: calc(0px - 10px);
+  width: calc(100% + 10px);
+}
+.footer > :global(.__wab_flex-container) > *,
+.footer > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.footer > :global(.__wab_flex-container) > picture > img,
+.footer
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 10px;
+}
+.messageTextInput:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.svg__mWrkw {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+}
+.svg__xiUj5 {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+}
+.sendIcon {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}

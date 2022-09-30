@@ -1,9 +1,19 @@
 {
   "props": [
     {
+      "name": "UnnamedStyleToken",
+      "type": "color",
+      "value": "#FFFFFF",
+      "category": "color",
+      "meta": {
+        "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+        "id": "T1fInkDJn"
+      }
+    },
+    {
       "name": "UnnamedStyleToken 2",
       "type": "color",
-      "value": "#F3F3F3",
+      "value": "#C9C9C9",
       "category": "color",
       "meta": {
         "projectId": "6DJkPmHY5SLmKWFpAEwtam",
@@ -11,9 +21,29 @@
       }
     },
     {
+      "name": "analog",
+      "type": "color",
+      "value": "#85D5AC",
+      "category": "color",
+      "meta": {
+        "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+        "id": "IEyvDu3g2"
+      }
+    },
+    {
+      "name": "analog2",
+      "type": "color",
+      "value": "#1C6F45",
+      "category": "color",
+      "meta": {
+        "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+        "id": "X2QICHwmk"
+      }
+    },
+    {
       "name": "background",
       "type": "color",
-      "value": "#F3F3F3",
+      "value": "#98B9CD66",
       "category": "color",
       "meta": {
         "projectId": "6DJkPmHY5SLmKWFpAEwtam",
@@ -21,9 +51,49 @@
       }
     },
     {
+      "name": "main2",
+      "type": "color",
+      "value": "#84B2CD",
+      "category": "color",
+      "meta": {
+        "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+        "id": "ERnpz1wKx"
+      }
+    },
+    {
+      "name": "main3",
+      "type": "color",
+      "value": "#4B6574",
+      "category": "color",
+      "meta": {
+        "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+        "id": "V2ssup5jt"
+      }
+    },
+    {
+      "name": "main4",
+      "type": "color",
+      "value": "#52809B",
+      "category": "color",
+      "meta": {
+        "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+        "id": "LhIpywnWU"
+      }
+    },
+    {
+      "name": "mainDark",
+      "type": "color",
+      "value": "#1B496591",
+      "category": "color",
+      "meta": {
+        "projectId": "6DJkPmHY5SLmKWFpAEwtam",
+        "id": "Drwm0lPiu"
+      }
+    },
+    {
       "name": "primary",
       "type": "color",
-      "value": "#1FCAD1",
+      "value": "#55AA7F",
       "category": "color",
       "meta": {
         "projectId": "6DJkPmHY5SLmKWFpAEwtam",

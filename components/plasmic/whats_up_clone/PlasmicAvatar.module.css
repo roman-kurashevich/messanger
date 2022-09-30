@@ -1,0 +1,85 @@
+.root {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  padding: 0px;
+}
+.rootisEmpty {
+  width: 80px;
+  min-width: 80px;
+  height: 80px;
+  min-height: 80px;
+  align-items: center;
+  justify-content: center;
+  background: var(--token-IEyvDu3g2);
+  display: flex;
+  border-radius: 50%;
+  padding: 0px;
+}
+.rootisEmpty_size__60 {
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
+  min-height: 60px;
+}
+.rootisEmpty_size__40 {
+  min-width: 40px;
+  max-width: none;
+  height: 40px;
+  min-height: 40px;
+  width: 40px;
+}
+.img {
+  object-fit: cover;
+  max-width: 100%;
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  min-height: 80px;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+.img > picture > img {
+  object-fit: cover;
+}
+.img > :global(.__wab_img-spacer) > img {
+  object-fit: cover;
+}
+.imgisEmpty {
+  display: none !important;
+}
+.imgsize__60 {
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
+  min-height: 60px;
+  flex-shrink: 0;
+}
+.imgsize__40 {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  min-height: 40px;
+  flex-shrink: 0;
+}
+.freeBox {
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 800px;
+  justify-content: center;
+  flex-direction: row;
+  display: none;
+}
+.freeBoxisEmpty {
+  display: flex;
+}
+.slotTargetPrefixText {
+  font-size: 32px;
+  text-align: center;
+}

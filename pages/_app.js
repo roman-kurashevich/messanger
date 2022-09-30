@@ -2,7 +2,17 @@ import { useEffect } from 'react';
 import '../styles/globals.css'
 import { PlasmicRootProvider } from "@plasmicapp/react-web";
 import { supabase } from '../utils/supabaseClient'
+import { QueryClient, QueryClientProvider } from 'react-query';
 import Head from "next/head";
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 0,
+      refetchOnWindowFocus: false,
+    }
+  }
+})
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -33,7 +43,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <PlasmicRootProvider Head={Head}>
-      <Component {...pageProps} />
+      <QueryClientProvider client={queryClient}>
+       <Component {...pageProps} />
+      </QueryClientProvider>
     </PlasmicRootProvider>
   );
 }

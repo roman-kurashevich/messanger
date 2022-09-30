@@ -16,6 +16,7 @@ function Homepage() {
         logoutButton={{
           onClick: async () => {
             await supabase.auth.signOut();
+            router.replace('/login');
           }
         }}
       />

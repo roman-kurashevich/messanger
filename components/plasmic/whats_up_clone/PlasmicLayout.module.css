@@ -1,0 +1,18 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  min-height: 0;
+}
+.sidebar:global(.__wab_instance) {
+  position: relative;
+  flex-shrink: 0;
+}
+.chat___0PbbK:global(.__wab_instance) {
+  position: relative;
+}

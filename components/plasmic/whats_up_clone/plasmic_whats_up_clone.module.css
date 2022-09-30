@@ -1,14 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C900&family=Inconsolata%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C900&display=swap");
 
 .plasmic_tokens {
-  --token-hVm9y7jFI: #1fcad1;
+  --token-hVm9y7jFI: #55aa7f;
   --plasmic-token-primary: var(--token-hVm9y7jFI);
   --token-G9RjEiHZt: #b43bd9;
   --plasmic-token-secondary: var(--token-G9RjEiHZt);
-  --token-3DlgrkGiT: var(--token-pSbfb_2FR);
+  --token-3DlgrkGiT: #98b9cd66;
   --plasmic-token-background: var(--token-3DlgrkGiT);
-  --token-pSbfb_2FR: #f3f3f3;
-  --plasmic-token-unnamed-style-token-2: var(--token-pSbfb_2FR);
+  --token-Drwm0lPiu: #1b496591;
+  --plasmic-token-main-dark: var(--token-Drwm0lPiu);
+  --token-T1fInkDJn: #ffffff;
+  --plasmic-token-unnamed-style-token: var(--token-T1fInkDJn);
+  --token-ERnpz1wKx: #84b2cd;
+  --plasmic-token-main-2: var(--token-ERnpz1wKx);
+  --token-V2ssup5jt: #4b6574;
+  --plasmic-token-main-3: var(--token-V2ssup5jt);
+  --token-LhIpywnWU: #52809b;
+  --plasmic-token-main-4: var(--token-LhIpywnWU);
+  --token-IEyvDu3g2: #85d5ac;
+  --plasmic-token-analog: var(--token-IEyvDu3g2);
+  --token-X2QICHwmk: #1c6f45;
+  --plasmic-token-analog-2: var(--token-X2QICHwmk);
 }
 
 .plasmic_default_styles {

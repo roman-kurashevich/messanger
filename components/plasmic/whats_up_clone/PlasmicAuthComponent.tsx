@@ -177,35 +177,25 @@ function PlasmicAuthComponent__RenderFunc(props: {
 
       {(hasVariant(variants, "isError", "isError") ? true : true) ? (
         <div
-          className={classNames(projectcss.all, sty.freeBox__nJi2S, {
-            [sty.freeBoxisError__nJi2S80Fjw]: hasVariant(
+          className={classNames(projectcss.all, sty.freeBox___6Jjy, {
+            [sty.freeBoxisError___6Jjy80Fjw]: hasVariant(
               variants,
               "isError",
               "isError"
             )
           })}
         >
-          <div
-            className={classNames(projectcss.all, sty.freeBox__cYfw4, {
-              [sty.freeBoxisError__cYfw480Fjw]: hasVariant(
+          {p.renderPlasmicSlot({
+            defaultContents: "Error text goes here",
+            value: args.errorMessage,
+            className: classNames(sty.slotTargetErrorMessage, {
+              [sty.slotTargetErrorMessageisError]: hasVariant(
                 variants,
                 "isError",
                 "isError"
               )
-            })}
-          >
-            {p.renderPlasmicSlot({
-              defaultContents: "Error text goes here",
-              value: args.errorMessage,
-              className: classNames(sty.slotTargetErrorMessage, {
-                [sty.slotTargetErrorMessageisError]: hasVariant(
-                  variants,
-                  "isError",
-                  "isError"
-                )
-              })
-            })}
-          </div>
+            })
+          })}
         </div>
       ) : null}
 
